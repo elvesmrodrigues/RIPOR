@@ -53,7 +53,7 @@ def data_generate(
 
     model_outputs = model.generate(
         **inputs,
-        max_length=32,
+        max_length=512,
         no_repeat_ngram_size=2,
         num_beams=2 * num_seqs,
         num_return_sequences=num_seqs
