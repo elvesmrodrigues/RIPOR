@@ -1,4 +1,4 @@
-python -m torch.distributed.launch --nproc_per_node=2 -m t5_pretrainer.main 
+python -m torch.distributed.launch --nproc_per_node=2 -m t5_pretrainer.main \
     --epochs=50  \
     --run_name=t5_docid_gen_encoder_0 \
     --learning_rate=1e-4 \
