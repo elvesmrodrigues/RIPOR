@@ -711,7 +711,7 @@ class DenseRetriever:
 
         if index is None:
             index = faiss.read_index(self.index_path)
-            index = self._convert_index_to_gpu(index, list(range(8)), False)
+            #index = self._convert_index_to_gpu(index, list(range(8)), False)
         
         nn_scores, nn_doc_ids = self._index_retrieve(index, query_embs, topk, batch=128)
         
