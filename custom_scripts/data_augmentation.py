@@ -146,7 +146,7 @@ def main():
                 break
 
             examples = [json.loads(line) for line in batch]
-            for docid, gen_queries in data_generate(examples, tokenizer, model, argparse.num_seqs):
+            for docid, gen_queries in data_generate(examples, tokenizer, model, args.num_seqs):
                 for query in gen_queries:
                     f.write(json.dumps({'docid': docid, 'query': query}) + '\n')
 
