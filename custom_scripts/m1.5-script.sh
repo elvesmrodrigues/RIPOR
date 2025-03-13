@@ -7,7 +7,5 @@ index_dir=$model_dir/aq_index
 mmap_dir=$model_dir/mmap
 out_dir=$model_dir/aq_out
 
-python t5_pretrainer/aq_preprocess/create_customized_smtid_file.py \
-    --model_dir=$model_dir \
-    --M=32 \
-    --bits=8
+python -m t5_pretrainer.aq_preprocess.change_embed_layer \
+    --model_dir=$model_dir
