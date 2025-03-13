@@ -6,12 +6,14 @@ pretrained_path=$model_dir/checkpoint
 index_dir=$model_dir/aq_index
 mmap_dir=$model_dir/mmap
 out_dir=$model_dir/aq_out
+q_collection_paths='["./data/magsample/dev_queries/"]'
+eval_qrel_path='["./data/magsample/dev_qrels/qrel.json"]'
 
 python -m t5_pretrainer.evaluate \
---task=aq_evaluate \
---pretrained_path=$pretrained_path \
---index_dir=$index_dir \
---out_dir=$out_dir \
---q_collection_paths=$q_collection_paths \
---eval_qrel_path=$eval_qrel_path  \
---mmap_dir=$mmap_dir
+    --task=aq_evaluate \
+    --pretrained_path=$pretrained_path \
+    --index_dir=$index_dir \
+    --out_dir=$out_dir \
+    --q_collection_paths=$q_collection_paths \
+    --eval_qrel_path=$eval_qrel_path  \
+    --mmap_dir=$mmap_dir
