@@ -1,4 +1,4 @@
-data_root_dir=./data/ripor
+data_root_dir=./data/magsample
 collection_path=$data_root_dir/collection/
 experiment_dir=experiments/full-t5seq-aq
 model_dir="./$experiment_dir/t5_docid_gen_encoder_0"
