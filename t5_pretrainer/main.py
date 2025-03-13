@@ -150,6 +150,7 @@ def main():
             eval_steps=args.eval_steps,
             save_steps=args.save_steps,
             bf16=args.use_fp16,
+            report_to='tensorboard',
             #bf16=False,
             #no_cuda=True
             #dataloader_num_workers=4
@@ -157,7 +158,7 @@ def main():
     else:
         raise NotImplementedError
 
-    if training_args.local_rank <= 0:  # only on main process
+    if False: #training_args.local_rank <= 0:  # only on main process
         wandb.login()
         wandb.init(project=args.wandb_project_name, name=args.run_name)
 
