@@ -15,7 +15,7 @@ run_name=t5seq_aq_encoder_seq2seq_1
 
 teacher_score_path=./data/magsample/bm25_run/qrel_added_qid_docids_teacher_scores.train.jsonl
 
-python -m torch.distributed.launch --nproc_per_node=8 -m t5_pretrainer.main \
+python -m torch.distributed.launch --nproc_per_node=2 -m t5_pretrainer.main \
     --epochs=150 \
     --run_name=$run_name \
     --learning_rate=1e-4 \
