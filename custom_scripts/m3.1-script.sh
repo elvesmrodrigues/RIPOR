@@ -1,5 +1,6 @@
 task=t5seq_aq_get_qid_to_smtid_rankdata
 
+experiment_dir=experiments/full-t5seq-aq
 data_dir="./$experiment_dir/t5_docid_gen_encoder_0"
 data_dir="./$experiment_dir/t5_docid_gen_encoder_0"
 docid_to_smtid_path=$data_dir/aq_smtid/docid_to_smtid.json 
